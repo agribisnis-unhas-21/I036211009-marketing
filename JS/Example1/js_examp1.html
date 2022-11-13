@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_exampel 1</title>
+</head>
+
+<body>
+    <h1 style="color: rgb(0, 94, 255);" >Welcome To JavaScript</h1>
+    <h3 style="color: rgb(232, 0, 0);">Pengenalan Variabel JavaScript</h3>
+
+    <script>
+        // cara 1
+        var x = 3;
+        var y = "Welcome to...";
+        document.write('Ini nilai x: ',x,'<br>');
+        document.write('Pesan : ',y);
+
+        // cara 2
+        let a = 36;
+        let b = 47;
+        let c = a + b ;
+        document.write('<br>');
+        document.write(a,' + ',b,' = ',c);
+
+        // cara 3
+        const Kambing = "Sanen";
+        const Umur    = 4;
+        document.write('<br>','Kambing : ',Kambing);
+        document.write('<br>','Umur : ',Umur);
+
+    </script>
+
+    <h3 style="color: rgb(255, 196, 0);">Pengenalan Logika JavaScript</h3>
+    <script>
+        
+
+        // ini function or fungsi pada JavaSript
+        function Login(id_user, id_pass){
+            // document.write('dalam functon');
+
+            input_user = document.getElementById(id_user).value;
+            input_pass = document.getElementById(id_pass).value;
+
+            var username = "admin";
+            var password = "admin123";
+
+            if (input_user === username) {
+                // document.write('username: benar','<br>');
+
+                if (input_pass === password) {
+                    // document.write('password: benar');
+                    window.alert('Login Berhasil');
+
+                    document.getElementById(id_user).innerHTML ="";
+                    document.getElementById(id_pass).innerHTML ="";
+                } else {
+                    // document.write('password: salah');
+                    window.alert('Password Anda Salah');
+                }
+            } else {
+                // document.write('username: salah');
+                window.alert('Username Anda Salah');
+            }
+                
+            }
+            
+    </script>
+
+    <form action="Login">
+        <label for="username">username : </label>
+        <input type="text" id="username">
+        <br>
+        <br>
+        <label for="password">password : </label>
+        <input type="password" id="password">
+        <br>
+        <br>
+        <a href="">
+            <button type="button" onclick="Login('username','password')">Login</button>
+        </a>
+        
+    </form>
+
+</body>
+
+</html>

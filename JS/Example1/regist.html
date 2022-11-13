@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_regist</title>
+</head>
+
+<body>
+    <h3>Create new username and password</h3>
+    <br>
+
+    <form action="regist">
+       <label for="new_user">username : </label> 
+       <input type="text" id="new_user">
+       <br>
+       <br>
+       <label for="new_pass1">password : </label> 
+       <input type="text" id="new_pass1">
+       <br>
+       <br>
+       <label for="new_pass2">password : </label> 
+       <input type="text" id="new_pass2">
+       <br>
+       <br>
+       <button type="button" onclick="get_user('new_user','new_pass1','new_pass2')">Regist</button>
+    </form>
+
+    <script>
+        var ds_user = [];
+        var ds_pass = [];
+        
+        var index = 0;
+        
+       
+
+        function get_user(new_user,new_pass1,new_pass2){
+            get_nuser = document.getElementById(new_user).value;
+
+            get_pass1 = document.getElementById(new_pass1).value;
+
+            get_pass2 = document.getElementById(new_pass2).value;
+            if(get_pass1 === get_pass2){
+                ds_user[index] = get_nuser;
+                ds_pass[index] = get_pass1;
+                index += 1;
+                document.write('new user:',ds_user[0]);
+            }
+            
+        }
+
+        
+    </script>
+</body>
+
+</html>
